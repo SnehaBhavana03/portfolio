@@ -4,37 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             color: #fff;
             background: url('background1.jpg') no-repeat center center fixed;
-            background-size:cover;
+            background-size: cover;
             height: 100vh;
             width: 100%;
             overflow-y: scroll;
-           
         }
         .navbar {
-            display:flex;
+            display: flex;
             flex-wrap: wrap;
             width: 100%;
             background-color: rgb(255, 250, 250); 
-            
-          
             justify-content: center;
-            /* margin-left: 50px; */
             padding: 10px;
             position: fixed;
             top: 0;
             z-index: 1000;
-        } */
-        .home{
-            flex: 1 1 auto;
         }
-        
-       .navbar a {        
+        .navbar a {
             color: rgb(17, 1, 11);
             padding: 14px 20px;
             text-decoration: none;
@@ -42,32 +35,22 @@
             font-style: italic;
         }
         .navbar a:hover {
-          color: rgb(155, 60, 104);
+            color: rgb(155, 60, 104);
         }
         .content {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 4fr;
             align-items: center;
             justify-content: center;
             padding-top: 60px; /* Offset for the navbar */
             padding-bottom: 100px;
-            
+            height: calc(100vh - 70px); /* Adjust for the navbar height */
         }
-        
         .title {
             font-size: 5em;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             text-align: center;
-            margin-top: 20%;
             
-            
-            
-        }
-        .title1{
-            font-size: small;
-            
-            margin-top: 20%;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         .tiles {
             display: flex;
@@ -107,8 +90,8 @@
             background-color: #873664fe;
             color: #f8f6f8f8;
             text-align: center;
-            text-decoration:wavy;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-decoration: none;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             font-size: 1.2em;
             font-style: italic;
             box-shadow: 0 4px 8px rgba(84, 27, 60, 0.283);
@@ -117,6 +100,22 @@
         }
         .download-button:hover {
             transform: scale(1.1);
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #873664fe;
         }
         .section {
             width: 100%;
@@ -144,17 +143,23 @@
             justify-content: center;
             gap: 20px;
         }
-        .about{
-          display: flex;
-          padding: 100px;
-          text-align: justify;
+        .about {
+            display: flex;
+            padding: 100px;
+            text-align: justify;
         }
         h2 {
-          padding-top: 50px;
+            padding-top: 50px;
         }
-        button{
+        button {
             border: 0px;
-            background: url("../images/buttonbg. png") no-repeat scroll 0 0 transparent;
+            background: url("../images/buttonbg.png") no-repeat scroll 0 0 transparent;
+        }
+        .grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -167,42 +172,38 @@
     </div>
    
     <div id="home" class="content">
-        <!-- <div class="title1">
-            Techie with a Heart,
-        </div> -->
+        <div class="social-icons">
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
 
-        <div class="title">
-            Sneha Bhavana
+        <div class="grid-container">
+            <div class="title">
+                Sneha Bhavana
+            </div>
+            <a href="https://portfolio-b13b7.web.app/Resume.pdf" target="_blank" class="download-button">Download Resume</a>
         </div>
 
        
-        
-        <a href="https://portfolio-b13b7.web.app/Resume.pdf" target="_blank" class="download-button">Download Resume</a>
-        <!-- <div class="tiles">
-          <a href="https://www.albany.edu/" class="tile image-tile" style="background-image: url('image.png');">Image Tile</a>
-      </div> -->
-      
-      
     </div>
 
     <div id="About" class="section">
-    <div class="summary">
-     
-      <h2>About me</h2>
-      <div id="aboutme" class="about">
-      <p>As a passionate and driven Master's student in Computer Science at the University at Albany, New York, I am dedicated to leveraging my skills and knowledge to make meaningful contributions in the field of technology. With a strong foundation in programming languages such as Python and Java combined with coursework in algorithms and software engineering, I am equipped to tackle complex challenges and innovate solutions. 
+        <div class="summary">
+            <h2>About me</h2>
+            <div id="aboutme" class="about">
+                <p>As a passionate and driven Master's student in Computer Science at the University at Albany, New York, I am dedicated to leveraging my skills and knowledge to make meaningful contributions in the field of technology. With a strong foundation in programming languages such as Python and Java combined with coursework in algorithms and software engineering, I am equipped to tackle complex challenges and innovate solutions. 
 
-        Throughout my academic journey, I have engaged in projects focusing on areas such as data analysis and software development, honing my ability to collaborate effectively in multidisciplinary teams and communicate technical concepts with clarity. 
-        
-        I am enthusiastic about exploring opportunities to apply my expertise in real-world settings, whether through internships, research collaborations, or full-time positions. With a commitment to lifelong learning and a proactive approach to problem-solving, I am eager to embark on the next phase of my career journey and contribute to the advancement of technology and society. Let's connect and explore how we can collaborate to drive innovation forward. </p>
-      </div> 
+                Throughout my academic journey, I have engaged in projects focusing on areas such as data analysis and software development, honing my ability to collaborate effectively in multidisciplinary teams and communicate technical concepts with clarity. 
+
+                I am enthusiastic about exploring opportunities to apply my expertise in real-world settings, whether through internships, research collaborations, or full-time positions. With a commitment to lifelong learning and a proactive approach to problem-solving, I am eager to embark on the next phase of my career journey and contribute to the advancement of technology and society. Let's connect and explore how we can collaborate to drive innovation forward.</p>
+            </div>
+        </div>
     </div>
-  </div>
-    
 
-   </div>
     <div id="projects" class="section1">
-        <h2> My Projects</h2>
+        <h2>My Projects</h2>
         <div class="projects">
             <div class="tile"><a href="project1.html">Project 1</a></div>
             <div class="tile"><a href="project2.html">Project 2</a></div>
@@ -212,13 +213,12 @@
     </div>
 
     <div id="certifications" class="section">
-      <h2>My Certifications</h2>
-      <div class="projects">
-          <div class="tile"><a href="project1.html">certificate 1</a></div>
-          <div class="tile"><a href="project2.html">certificate 2</a></div>
-          
-          <!-- Add more projects as needed -->
-      </div>
-  </div>
+        <h2>My Certifications</h2>
+        <div class="projects">
+            <div class="tile"><a href="project1.html">Certificate 1</a></div>
+            <div class="tile"><a href="project2.html">Certificate 2</a></div>
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
 </body>
 </html>
