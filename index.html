@@ -161,6 +161,40 @@
             align-items: center;
             justify-content: center;
         }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            text-align: left;
+            width: 80%;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #873664fe;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #a0465a;
+        }
     </style>
 </head>
 <body>
@@ -169,13 +203,14 @@
         <a href="#About">About</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact Me</a>
     </div>
    
     <div id="home" class="content">
         <div class="social-icons">
             <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/sneha-bhavana/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/SnehaBhavana03" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
 
@@ -218,6 +253,19 @@
             <div class="tile"><a href="project1.html">Certificate 1</a></div>
             <div class="tile"><a href="project2.html">Certificate 2</a></div>
             <!-- Add more projects as needed -->
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact Me</h2>
+        <div class="contact-form">
+            <p>If you have any questions, feel free to reach out to me by filling out the form below:</p>
+            <form action="https://formspree.io/f/movaqoro" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </div>
 </body>
