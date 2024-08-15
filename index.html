@@ -11,6 +11,7 @@
     <meta property="og:image" content="https://snehabhavana.com/preview.jpg">
     <meta property="og:url" content="https://snehabhavana.com">
     <meta property="og:type" content="website">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -302,6 +303,22 @@ gallery-section {
     object-fit: cover;
 }
 
+@keyframes floatIn {
+    from {
+        transform: translateY(-1000px); /* Start off-screen to the top */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.float-in {
+    animation: floatIn 2s ease-out;
+}
+
+
 
 
 
@@ -327,16 +344,14 @@ gallery-section {
             <a href="#contact" target="_blank"><i class="fa fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/sneha-bhavana/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/SnehaBhavana03" target="_blank"><i class="fab fa-github"></i></a>
-            <!-- <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a> -->
         </div>
-
+    
         <div class="grid-container">
-            <div class="title">
-                Sneha Bhavana
-            </div>
-            <a href="https://portfolio-b13b7.web.app/Resume.pdf" target="_blank" class="download-button">Download Resume</a>
+            <div id="name" class="title">Sneha Bhavana</div>
+            <a id="resume-button" href="https://portfolio-b13b7.web.app/Resume.pdf" target="_blank" class="download-button">Download Resume</a>
         </div>
     </div>
+    
 
     <div id="About" class="section">
         <div class="summary">
@@ -423,5 +438,24 @@ gallery-section {
             </form>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Target the name and resume button
+            const nameElement = document.getElementById('name');
+            const resumeButton = document.getElementById('resume-button');
+            
+            // Apply the floating animation to the name
+            setTimeout(() => {
+                nameElement.classList.add('float-in');
+            }, 100); // Slight delay before animation starts
+    
+            // Apply the floating animation to the resume button
+            setTimeout(() => {
+                resumeButton.classList.add('float-in');
+            }, 500); // Delay the resume button's animation
+        });
+    </script>
+    
 </body>
 </html>
